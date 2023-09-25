@@ -4,7 +4,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout the code from the repository
-                checkout scm
+                git branch: 'main', credentialsId: 'qa credentials ', url: 'git@github.com:chamberlain96/presentation.git'
             }
         }
         stage('Terraform Init and Apply') {
