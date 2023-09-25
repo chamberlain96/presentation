@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+    stages {
+        stage('Checkout') {
+            steps {
+                // Checkout the code from the repository
+                checkout scm
+            }
+        }
+        stage('Terraform Init and Apply') {
+            steps {
+                // Navigate to the Terraform code directory
+                dir('Desktop/variable_tra/module/dev') {
+                    // Run Terraform commands
+                    sh 'terraform init'
+                    sh 'terraform apply -auto-approve'
+                }
+            }
+        }
+    }
+}
