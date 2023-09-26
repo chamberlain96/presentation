@@ -1,9 +1,8 @@
-node('built-in') {
-    // some block
-}
-    stages {
-        
- stage('continuous download ') {
+pipeline {
+    agent any
+    
+stages {
+         stage('continuous download ') {
    git 'https://github.com/chamberlain96/presentation'
     // some block
     }
