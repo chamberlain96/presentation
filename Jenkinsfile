@@ -7,10 +7,13 @@ stages {
     // some block
     }
         }
+
+     stage('Checkout Code into Directory B') {
+            steps {
+                // Use the 'dir' step to change the working directory
+                dir('Desktop/variable_tra/module/dev') { 
         stage('Terraform Init and Apply') {
             steps {
-                // Navigate to the Terraform code directory
-                dir('Desktop/variable_tra/module/dev') {
                     // Run Terraform commands
                     sh 'terraform init'
                     sh 'terraform apply -auto-approve'
