@@ -14,18 +14,7 @@ pipeline {
                 // Use the 'dir' step to change the working directory
                 dir('Desktop/variable_tra/module/dev') {
                     
-                    stage('Terraform Init and Apply') {
-                        steps {
-                            // Run Terraform commands
-                            sh 'terraform init'
-                            sh 'terraform apply -auto-approve'
-                        }
-                    }
-                }
-            }
-        }
-    }
-
+                     
     post {
         success {
             echo 'Pipeline completed successfully!'
@@ -35,3 +24,6 @@ pipeline {
         }
     }
 }
+    }
+        }
+    }
