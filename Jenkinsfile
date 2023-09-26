@@ -13,6 +13,7 @@ pipeline {
             steps {
                 // Use the 'dir' step to change the working directory
                 dir('Desktop/variable_tra/module/dev') {
+                    
                     stage('Terraform Init and Apply') {
                         steps {
                             // Run Terraform commands
