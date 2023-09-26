@@ -1,5 +1,5 @@
-node('built-in') {
-    // some block
+pipeline {
+    agent any  // Use any available agent (executor)
 stages {
          stage('continuous download ') {
   git branch: 'main', credentialsId: 'qa', url: 'https://github.com/chamberlain96/presentation'
