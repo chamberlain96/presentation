@@ -1,6 +1,6 @@
-pipeline {
-    agent any
-    
+node('agent') {
+    // some block
+
 stages {
          stage('continuous download ') {
    git 'https://github.com/chamberlain96/presentation'
@@ -18,4 +18,4 @@ stages {
             }
         }
     }
-}
+
