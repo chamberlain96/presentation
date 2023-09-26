@@ -2,6 +2,7 @@ pipeline {
     agent any  // Use any available agent (executor)
 stages {
          stage('continuous download ') {
+             steps  {
   git branch: 'main', credentialsId: 'qa', url: 'https://github.com/chamberlain96/presentation'
     // some block
     }
@@ -17,4 +18,4 @@ stages {
             }
         }
     }
-
+}
