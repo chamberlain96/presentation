@@ -2,7 +2,7 @@ node('built-in') {
     // some block
 stages {
          stage('continuous download ') {
-   git 'https://github.com/chamberlain96/presentation'
+  git branch: 'main', credentialsId: 'qa', url: 'https://github.com/chamberlain96/presentation'
     // some block
     }
         }
