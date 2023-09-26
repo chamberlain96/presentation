@@ -9,22 +9,21 @@ pipeline {
             }
         }
 
-        stage('Checkout Code into Directory') {
+     stage('Checkout Code into Directory') {
             steps {
                 // Use the 'dir' step to change the working directory
                 dir('Desktop/variable_tra/module/dev') {
                     
-                     
-    post {
-        success {
-            echo 'Pipeline completed successfully!'
-        }
-        failure {
-            echo 'Pipeline failed!'
-        }
-    }
-}
-    }
-        }
-    }
-}
+      stage('Terraform Init and Apply') {
+                        steps {
+                            // Run Terraform commands
+                            sh 'terraform init'
+                            sh 'terraform apply -auto-approve'
+                        }
+                    }
+                }
+            }
+    
+
+
+ 
