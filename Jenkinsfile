@@ -2,11 +2,11 @@ node('built-in') {
     // some block
 }
     stages {
-        stage('Checkout') {
-            steps {
-                // Checkout the code from the repository
-                git branch: 'main', credentialsId: 'qa credentials ', url: 'git@github.com:chamberlain96/presentation.git'
-            }
+        
+ stage('continuous download ') {
+   git 'https://github.com/chamberlain96/presentation'
+    // some block
+    }
         }
         stage('Terraform Init and Apply') {
             steps {
